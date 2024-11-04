@@ -5,23 +5,18 @@ type CartContainerPropsType = {
   isCart: boolean;
   CartList: ProductsType[];
   setCartList: React.Dispatch<React.SetStateAction<ProductsType[]>>;
-  setisCard: React.Dispatch<React.SetStateAction<boolean>>;
+  setisCheckout: React.Dispatch<React.SetStateAction<boolean>>;
 };
 export default function CartContainer({
   isCart,
   CartList,
   setCartList,
-  setisCard,
+  setisCheckout,
 }: CartContainerPropsType) {
   const totalPrice = CartList.reduce((acc: number, cur) => {
     return acc + cur.price;
   }, 0);
 
-  const handleCheckoutClick = () => {
-    alert("Thank you for the shopping");
-    setCartList([]);
-    setisCard(false);
-  };
   return (
     <div
       className={`w-[500px] fixed right-0 bg-[#739caf] top-[100px] h-[100vh] border-2 z-10 px-[10px] py-[20px] CartContainer ${
@@ -47,7 +42,7 @@ export default function CartContainer({
           <div className="w-[100%] flex justify-center">
             <button
               className="bg-black text-white h-[50px] px-[10px] rounded-lg active:scale-95 font-bold"
-              onClick={handleCheckoutClick}
+              onClick={() => setisCheckout(true)}
             >
               Checkout
             </button>
