@@ -14,7 +14,7 @@ export default function ProductCard({
   RemoverButton = false,
 }: ProductCardProsType) {
   return (
-    <div className="flex flex-col w-[280px] max-h-[427px] p-[30px] justify-between hover:shadow-xl hover:border-[1px] mx-auto relative border-[1px] rounded-md">
+    <div className="flex flex-col bg-white w-[280px] max-h-[427px] p-[30px] justify-between hover:shadow-xl hover:border-[1px] mx-auto relative border-[1px] rounded-md">
       <div className="productcardinner w-[100%] h-[250px] rounded-xl overflow-hidden">
         <img src={`${Product.image}`} alt="" className="w-[100%] h-[100%]" />
       </div>

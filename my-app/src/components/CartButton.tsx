@@ -16,7 +16,7 @@ export default function CartButton({
   const handleaddButtonClick = () => {
     /////////function for adding items
     if (CartList.some((item) => item.id === Product.id)) {
-      alert("Item is already added to cart ");
+      alert("Item is already added to the cart ");
       return;
     }
     setCartList((Prev) => [...Prev, Product]);

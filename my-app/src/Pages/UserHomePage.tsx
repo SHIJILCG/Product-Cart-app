@@ -22,7 +22,7 @@ export default function UserHomePage() {
   const products: ProductsType[] | [] = SearchResult
     ? filterBySearchResult(SearchResult, Items)
     : Items;
- console.log(isLoading,isError)
+
   return (
     <div className="flex flex-col px-[30px] relative">
       <Header
@@ -54,9 +54,10 @@ export default function UserHomePage() {
         )}
       </div>
       <CartContainer
-        isCard={isCart}
+        isCart={isCart}
         CartList={CartList}
         setCartList={setCartList}
+        setisCard={setisCart}
       />
     </div>
   );
