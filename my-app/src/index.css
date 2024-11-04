@@ -29,6 +29,9 @@
     .CartContainer {
         width: 100%;
     }
+    .checkoutContainer{
+        width: 300px;
+    }
 }
 
 @media (max-width:360px) {
