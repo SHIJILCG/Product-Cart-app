@@ -22,7 +22,7 @@ export default function UserHomePage() {
   const products: ProductsType[] | [] = SearchResult
     ? filterBySearchResult(SearchResult, Items)
     : Items;
-
+ console.log(isLoading,isError)
   return (
     <div className="flex flex-col px-[30px] relative">
       <Header
@@ -37,7 +37,7 @@ export default function UserHomePage() {
         <span className="w-[100%] flex justify-center text-[20px] font-bold uppercase underline mb-[50px] mt-[130px]">
           <h2>Products</h2>
         </span>
-        {isLoading && !isError && <LoadingContainer />}
+        {isLoading && <LoadingContainer />}
         {isError && <span>Error while fetching data</span>}
         {products?.length === 0 && <div>No item found</div>}
         {!isError && !isLoading && (
