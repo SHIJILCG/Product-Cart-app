@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.showCart {
+    transform: translateX(0%);
+    transition: all 0.2s ease-in;
+}
+
+.hideCart {
+    transform: translateX(200%);
+    transition: all 0.2s ease-out;
+}
+
+.hide-scrollbar {
+    scrollbar-width: none;
+}
+
+@media (max-width:560px) {
+    .headerText {
+        display: none;
+    }
+
+    .HeaderContainer {
+        justify-content: center;
+    }
+
+    .CartContainer {
+        width: 100%;
+    }
+}
+
+@media (max-width:360px) {
+    .Search_Cart_Container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .HeaderContainer {
+        height: 200px;
+    }
+
+    .CartContainer {
+        top: 200px;
+    }
+
+    .CartCardWrapper {
+        padding-bottom: 300px;
+    }
+}
